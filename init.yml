@@ -1,0 +1,3 @@
+---
+- import_playbook: swarm-master.yml
+- import_playbook: swarm-worker.yml

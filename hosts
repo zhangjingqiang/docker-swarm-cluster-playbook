@@ -1,0 +1,13 @@
+[swarm-master]
+swarm-01
+
+[swarm-worker]
+swarm-02
+swarm-03
+
+[swarm:children]
+swarm-master
+swarm-worker
+
+[swarm:vars]
+ansible_ssh_user=ubuntu

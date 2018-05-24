@@ -1,0 +1,9 @@
+---
+- name: Copy visualizer file to swarm master
+  copy:
+    src: visualizer.yml
+    dest: ~/visualizer.yml
+    mode: 0644
+
+- name: Run visualizer
+  shell: docker stack deploy -c ~/visualizer.yml awesome-stack

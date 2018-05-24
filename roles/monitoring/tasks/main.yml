@@ -1,0 +1,9 @@
+---
+- name: Copy monitoring file to swarm master
+  copy:
+    src: monitoring.yml
+    dest: ~/monitoring.yml
+    mode: 0644
+
+- name: Run monitoring
+  shell: docker stack deploy -c ~/monitoring.yml awesome-stack

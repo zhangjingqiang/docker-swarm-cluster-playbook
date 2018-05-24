@@ -1,0 +1,14 @@
+version: "3"
+services:
+  web:
+    image: {{ repo }}/application:{{ tag }}
+    deploy:
+      replicas: 5
+      restart_policy:
+        condition: on-failure
+    ports:
+      - "80:80"
+    networks:
+      - webnet
+networks:
+  webnet:

@@ -1,0 +1,8 @@
+---
+- name: Swarm Master
+  hosts: swarm-master
+  remote_user: ubuntu
+  roles:
+    - swarm-master
+    - monitoring
+    - visualizer

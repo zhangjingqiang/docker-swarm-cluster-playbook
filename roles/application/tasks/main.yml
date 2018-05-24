@@ -1,0 +1,10 @@
+---
+- name: Copy application file to swarm master
+  template:
+    src: application.yml.j2
+    dest: ~/application.yml
+    mode: 0644
+    force: yes
+
+- name: Run application
+  shell: docker stack deploy -c ~/application.yml awesome-stack

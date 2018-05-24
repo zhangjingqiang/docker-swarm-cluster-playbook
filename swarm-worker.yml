@@ -1,0 +1,6 @@
+---
+- name: Swarm Worker
+  hosts: swarm-worker
+  remote_user: ubuntu
+  roles:
+    - swarm-worker

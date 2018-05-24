@@ -1,0 +1,6 @@
+---
+- name: Deploy
+  hosts: swarm-master
+  remote_user: ubuntu
+  roles:
+    - application
