@@ -4,9 +4,11 @@
   remote_user: ubuntu
   roles:
     - swarm-master
+    - sd
+    - ci
     - ui
     - visualizer
     - monitoring
     - registry
     - gateway
-    - sd
+    - git

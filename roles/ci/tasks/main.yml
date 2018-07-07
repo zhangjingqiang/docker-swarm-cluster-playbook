@@ -1,0 +1,9 @@
+---
+- name: Copy ci file to swarm master
+  copy:
+    src: ci.yml
+    dest: ~/ci.yml
+    mode: 0644
+
+- name: Run ci
+  shell: docker stack deploy -c ~/ci.yml continuous-integration

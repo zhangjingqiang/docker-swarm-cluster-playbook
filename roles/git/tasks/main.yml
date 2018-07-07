@@ -1,0 +1,9 @@
+---
+- name: Copy git file to swarm master
+  copy:
+    src: git.yml
+    dest: ~/git.yml
+    mode: 0644
+
+- name: Run git
+  shell: docker stack deploy -c ~/git.yml git
