@@ -1,0 +1,9 @@
+---
+- name: Copy gateway file to swarm master
+  copy:
+    src: gateway.yml
+    dest: ~/gateway.yml
+    mode: 0644
+
+- name: Run gateway
+  shell: docker stack deploy -c ~/gateway.yml gateway

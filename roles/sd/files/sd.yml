@@ -1,0 +1,22 @@
+version: "3"
+
+services:
+  consul:
+    image: consul
+    ports:
+      - "8500:8500"
+      - "8600:8600/udp"
+    networks:
+      - consul
+
+  registrator:
+    image: gliderlabs/registrator:latest
+    volumes:
+      - "/var/run/docker.sock:/tmp/docker.sock"
+    links:
+      - "consul://consul:8500"
+    networks:
+      - consul
+
+networks:
+  consul:

@@ -6,4 +6,4 @@
     mode: 0644
 
 - name: Run monitoring
-  shell: docker stack deploy -c ~/monitoring.yml awesome-stack
+  shell: docker stack deploy -c ~/monitoring.yml monitoring

@@ -1,0 +1,9 @@
+---
+- name: Copy sd file to swarm master
+  copy:
+    src: sd.yml
+    dest: ~/sd.yml
+    mode: 0644
+
+- name: Run service discovery
+  shell: docker stack deploy -c ~/sd.yml service-discovery

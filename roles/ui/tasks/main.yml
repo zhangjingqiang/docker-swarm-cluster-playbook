@@ -1,0 +1,9 @@
+---
+- name: Copy ui file to swarm master
+  copy:
+    src: ui.yml
+    dest: ~/ui.yml
+    mode: 0644
+
+- name: Run ui
+  shell: docker stack deploy -c ~/ui.yml ui

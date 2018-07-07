@@ -6,4 +6,4 @@
     mode: 0644
 
 - name: Run visualizer
-  shell: docker stack deploy -c ~/visualizer.yml awesome-stack
+  shell: docker stack deploy -c ~/visualizer.yml visualizer

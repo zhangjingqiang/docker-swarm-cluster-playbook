@@ -1,0 +1,9 @@
+---
+- name: Copy registry file to swarm master
+  copy:
+    src: registry.yml
+    dest: ~/registry.yml
+    mode: 0644
+
+- name: Run registry
+  shell: docker stack deploy -c ~/registry.yml registry
