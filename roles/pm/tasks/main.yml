@@ -1,0 +1,9 @@
+---
+- name: Copy pm file to swarm master
+  copy:
+    src: pm.yml
+    dest: ~/pm.yml
+    mode: 0644
+
+- name: Run pm
+  shell: docker stack deploy -c ~/pm.yml project-management

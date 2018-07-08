@@ -11,10 +11,9 @@ services:
 
   registrator:
     image: gliderlabs/registrator:latest
+    command: "consul://consul:8500"
     volumes:
       - "/var/run/docker.sock:/tmp/docker.sock"
-    links:
-      - "consul://consul:8500"
     networks:
       - consul
 

@@ -1,0 +1,22 @@
+version: '3.1'
+
+services:
+  redmine:
+    image: redmine
+    ports:
+      - 8008:3000
+    environment:
+      REDMINE_DB_MYSQL: db
+      REDMINE_DB_PASSWORD: example
+
+  db:
+    image: mysql:5.7
+    environment:
+      MYSQL_ROOT_PASSWORD: example
+      MYSQL_DATABASE: redmine
+    volumes:
+      - database_data:/var/lib/mysql
+
+volumes:
+  database_data:
+    driver: local
