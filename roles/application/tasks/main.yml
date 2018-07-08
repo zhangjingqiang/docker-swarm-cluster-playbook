@@ -1,5 +1,5 @@
 ---
-- name: Copy application file to swarm master
+- name: Copy application file to swarm manager
   template:
     src: application.yml.j2
     dest: ~/application.yml

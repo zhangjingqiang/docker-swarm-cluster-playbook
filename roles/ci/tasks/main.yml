@@ -1,5 +1,5 @@
 ---
-- name: Copy ci file to swarm master
+- name: Copy ci file to swarm manager
   copy:
     src: ci.yml
     dest: ~/ci.yml

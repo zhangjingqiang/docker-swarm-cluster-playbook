@@ -1,5 +1,5 @@
 ---
-- name: Copy registry file to swarm master
+- name: Copy registry file to swarm manager
   copy:
     src: registry.yml
     dest: ~/registry.yml

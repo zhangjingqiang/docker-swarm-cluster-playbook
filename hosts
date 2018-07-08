@@ -1,4 +1,4 @@
-[swarm-master]
+[swarm-manager]
 swarm-01
 
 [swarm-worker]
@@ -6,7 +6,7 @@ swarm-02
 swarm-03
 
 [swarm:children]
-swarm-master
+swarm-manager
 swarm-worker
 
 [swarm:vars]

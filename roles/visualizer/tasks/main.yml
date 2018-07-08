@@ -1,5 +1,5 @@
 ---
-- name: Copy visualizer file to swarm master
+- name: Copy visualizer file to swarm manager
   copy:
     src: visualizer.yml
     dest: ~/visualizer.yml

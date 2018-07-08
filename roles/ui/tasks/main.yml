@@ -1,5 +1,5 @@
 ---
-- name: Copy ui file to swarm master
+- name: Copy ui file to swarm manager
   copy:
     src: ui.yml
     dest: ~/ui.yml

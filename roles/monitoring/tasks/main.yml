@@ -1,5 +1,5 @@
 ---
-- name: Copy monitoring file to swarm master
+- name: Copy monitoring file to swarm manager
   copy:
     src: monitoring.yml
     dest: ~/monitoring.yml

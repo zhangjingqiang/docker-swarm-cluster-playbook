@@ -1,5 +1,5 @@
 ---
-- name: Copy sd file to swarm master
+- name: Copy sd file to swarm manager
   copy:
     src: sd.yml
     dest: ~/sd.yml

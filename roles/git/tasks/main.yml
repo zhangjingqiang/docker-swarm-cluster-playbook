@@ -1,5 +1,5 @@
 ---
-- name: Copy git file to swarm master
+- name: Copy git file to swarm manager
   copy:
     src: git.yml
     dest: ~/git.yml

@@ -1,5 +1,5 @@
 ---
-- name: Copy gateway file to swarm master
+- name: Copy gateway file to swarm manager
   copy:
     src: gateway.yml
     dest: ~/gateway.yml
